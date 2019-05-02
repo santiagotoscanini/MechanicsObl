@@ -36,3 +36,9 @@ scf(2)
 plot2d(t,y,-9); 
 scf(3)
 plot2d(x,y,-9); // Trayectoria
+
+//Analitico
+xa=x(1)+vx(1)*t;
+ya=y(1)+vy(1)*t-g*t.^2/2;
+plot2d(xa,ya,5);
+
