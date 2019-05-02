@@ -1,12 +1,13 @@
+clear
 m=3;
 g=9.8;
-dt=0.1;
+dt=0.001;
 
 // Condiciones iniciales
 x(1)=0;
 y(1)=10;
-vx(1)=0;
-vy(1)=0;
+vx(1)=5*cos(30*%pi/180);
+vy(1)=5*sin(30*%pi/180);
 t(1)=1;
 i=1;
 
@@ -30,8 +31,8 @@ end
 
 // Graficas
 scf(1)
-plot2d(t,x);
+plot2d(t,x,-9);
 scf(2)
-plot2d(t,y); 
+plot2d(t,y,-9); 
 scf(3)
-plot2d(x,y); // Trayectoria
+plot2d(x,y,-9); // Trayectoria
