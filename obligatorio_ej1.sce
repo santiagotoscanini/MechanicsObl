@@ -1,7 +1,7 @@
 //Datos
 v0=30;
 dt=0.001;
-d_phi=0.1;
+d_phi=0.5;
 ay = -9.8;
 
 //Seteando los angulos
