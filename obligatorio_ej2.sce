@@ -1,6 +1,14 @@
 //DEFINIR FUNCION 
-function [y] maxH= maxM(m)
+function [m] = maxM(y)
+    m=0;
+    i=0;
     
+    while(i<length(y)-1)
+        if(m<y(i))
+            m=y(i);
+        end
+        i=i+1;
+    end
 endfunction
 function [x,y] = calcularRec(phi)
     m=0.45;
@@ -63,5 +71,5 @@ scf(1)
 plot2d(x,y,-9);
 
 [o,p]=calcularRec(90);
-scf(2)
-plot2d(o,p,-9);
+m=maxM(p);
+disp(m);
