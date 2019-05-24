@@ -1,15 +1,8 @@
-//Datos
+//Datos iniciales
 v0=30;
 dt=0.001;
 d_phi=0.5;
 ay = -9.8;
-
-//Seteando los angulos
-
-//ITERANDO VECTOR
-//iter_phi(1)=0;
-//xF(1)=0;
-//j=1;
 
 //ITERANDO NORMAL
 iter_phi=0;
@@ -38,15 +31,12 @@ while (iter_phi<=90)
         i=i+1;
     end
 
-    //ITERANDO
-    //iter_phi(j+1)=iter_phi(j)+d_phi;
-    //j=j+1;
-    //xF(j)=x(i);
+    //Consigo el máximo
     if(x(i)>max_dis) then
         max_dis=x(i);
         max_phi=iter_phi;        
     end
-    iter_phi=iter_phi+d_phi;
+        iter_phi=iter_phi+d_phi;
 end
 disp(max_phi);
 

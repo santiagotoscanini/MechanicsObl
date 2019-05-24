@@ -10,6 +10,7 @@ function [m] = maxM(y)
         i=i+1;
     end
 endfunction
+
 function [x,y] = calcularRec(phi)
     m=0.45;
     g=9.8;
@@ -44,6 +45,7 @@ function [x,y] = calcularRec(phi)
         i=i+1;
     end
 endfunction
+
 //ITERANDO NORMAL
 iter_phi=0;
 max_phi=0;
