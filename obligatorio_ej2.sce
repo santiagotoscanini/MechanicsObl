@@ -11,12 +11,9 @@ function [m] = maxM(y)
         i=i+1;
     end
 endfunction
-<<<<<<< Updated upstream
 
-function [x,y] = calcularRec(phi)
-=======
 function [x,y,trabajo] = calcularRec(phi)
->>>>>>> Stashed changes
+
     m=0.45;
     g=9.8;
     dt=0.001;
@@ -88,5 +85,3 @@ disp(tr);
 [o,p,m]=calcularRec(90);
 m=maxM(p);
 disp(m);
-
-
