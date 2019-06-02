@@ -4,7 +4,6 @@ function [max_phi] = maxPhi(aire)
     max_phi=0;
     max_dis=0;
     d_phi=1;
-    trabajo = 0;
     while (iter_phi<=90)
     
         [x,y]=calcularRec(iter_phi,0.11,aire);    
