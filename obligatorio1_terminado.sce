@@ -72,8 +72,8 @@ function [x,y,trabajo,ei,ef,t] = calcularRec(phi,R,aire)
             
         Fy = -g*m+FaireY; // fuerza en eje y con newton, fuerza de la gravedad + fuerza del aire en y
         
-        ax = FaireX/m; //---------------------------------------------------------------
-        ay = Fy/m;
+        ax = FaireX/m; //Calculo la aceleracion en el eje x
+        ay = Fy/m; //Calculo la aceleracion en el eje y
 
         trabajo = trabajo + (FaireX*vox(i)*dt) + (FaireY*voy(i)*dt);
         
@@ -98,7 +98,7 @@ disp(s); //mostramos s
 
 scf(1) //lo colocamos en la ventana 1
 [xN,yN]=calcularRec(s,0,%F); //calculamos el recorrido del angulo maximo
-plot2d(xN,yN,-1); //lo ploteamos con los ejes x,y 
+plot2d(xN,yN,-4); //lo ploteamos con los ejes x,y 
 
 //t = length(yN)*0.001; //tiempo que demora en caer
 
@@ -113,7 +113,7 @@ end
 scf(1) //en la  misma ventana
 x = 30 * cos(s*%pi/180) * t; //posicion en x : vo.cos(phiMax).t 
 y = 30 * sin(s*%pi/180) * t - 9.8*t.^2/2;//posicion en y : vy.sin(phiMax).t
-plot2d(x,y,-1); //lo ploteamos con los ejes x,y
+plot2d(x,y,3); //lo ploteamos con los ejes x,y
 
 //EJERCICIO 2
 //ANGULO MAXIMO
