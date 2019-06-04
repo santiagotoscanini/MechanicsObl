@@ -100,14 +100,22 @@ scf(1) //lo colocamos en la ventana 1
 [xN,yN]=calcularRec(s,0,%F); //calculamos el recorrido del angulo maximo
 plot2d(xN,yN,-1); //lo ploteamos con los ejes x,y 
 
+//t = length(yN)*0.001; //tiempo que demora en caer
+
+t(1) = 0;
+dt = 0.001;
+i=1;
+while(i<=length(yN))
+  t(i+1)=t(i)+dt;
+  i = i+1 ;
+end
+
 scf(1) //en la  misma ventana
-t=length(yN)*0.001; //tiempo que demora en caer
-xa = 30 * cos(s*%pi/180) * t; //posicion en x : vo.cos(phiMax).t 
-ya = 30 * sin(s*%pi/180) * t - 9.8*t.^2/2;//posicion en y : vy.sin(phiMax).t
-plot2d(xa,ya,-1); //lo ploteamos con los ejes x,y
+x = 30 * cos(s*%pi/180) * t; //posicion en x : vo.cos(phiMax).t 
+y = 30 * sin(s*%pi/180) * t - 9.8*t.^2/2;//posicion en y : vy.sin(phiMax).t
+plot2d(x,y,-1); //lo ploteamos con los ejes x,y
 
 //EJERCICIO 2
-
 //ANGULO MAXIMO
 [a]=maxPhi(%T);
 disp("ANGULO MAXIMO CON AIRE")
@@ -119,7 +127,7 @@ m=maxM(p);
 disp("TIEMPO EN ALCANZAR ALTURA MAXIMA")
 disp(m);
 
-//TRBAJO Y ENERIGA
+//TRBAJO Y ENERGIA
 [x,y,tr,e,f]=calcularRec(a,0.11,%T);
 scf(2)
 plot2d(x,y,-9);
