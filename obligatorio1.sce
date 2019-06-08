@@ -130,6 +130,7 @@ disp(m);
 //TRBAJO Y ENERGIA
 [x,y,tr,e,f]=calcularRec(a,0.11,%T);
 scf(2)
+plot2d(xN,yN,-4);
 plot2d(x,y,-9);
 disp("TRABAJO");
 disp(tr);
