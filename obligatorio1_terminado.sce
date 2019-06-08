@@ -56,7 +56,7 @@ function [x,y,trabajo,ei,ef,t] = calcularRec(phi,R,aire)
         voy(1)=vo*sin(phi*%pi/180);
         
         t(1)=0; //comenzamos en el tiempo 0
-        i=1; //------------------------------------------------------------------------
+        i=1; 
         ei=m*(vo^2)/2; //energia inicial
         trabajo=0;
     
